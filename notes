@@ -1,0 +1,22 @@
+https://modernflorist.com/
+
+Welcome user:
+Welcome to Modern Florist, please enter a price range from the choices below:
+
+1. $45 - $79 (8)
+2. $80 - $149 (6)
+3. $150 and up (2)
+
+If type in something wrong, say invalid request, please enter a price range.
+If type in exit, then exit
+
+Whatever they type in, give them all the flowers listed:
+Each flowers should have:
+  name
+  price
+  url
+  
+Ask user: if you would like to see more information about a particular flower,
+please type its number or type main menu or exit
+  main menu brings you back to 1st method
+  exit - exits the program
