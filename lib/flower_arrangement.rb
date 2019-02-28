@@ -1,5 +1,3 @@
-require "flower_arrangement/version"
-
 module FlowerArrangement
 end
 

@@ -2,4 +2,4 @@
 
 require_relative '../lib/flower_arrangement.rb'
 
-FlowerArrangement::cli.new.call
+FlowerArrangement::CLI.new.call

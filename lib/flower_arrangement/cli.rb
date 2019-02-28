@@ -1,0 +1,3 @@
+class FlowerArrangement::CLI 
+  
+end

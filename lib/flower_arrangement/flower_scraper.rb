@@ -1,10 +1,10 @@
-require 'pry'
-
 class FlowerArrangement::FlowerScraper
+  attr_accessor :name, :price, :url
+  
   
   def self.scrape_main_website
     doc = Nokogiri::HTML(open("https://modernflorist.com/"))
-    binding.pry
+    # binding.pry
     
   end
   
@@ -23,4 +23,4 @@ class FlowerArrangement::FlowerScraper
   
 end
 
-FlowerScraper.scrape_main_website
+# FlowerScraper.scrape_main_website
