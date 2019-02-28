@@ -16,7 +16,6 @@ Each flowers should have:
   price
   url
   
-Ask user: if you would like to see more information about a particular flower,
-please type its number or type main menu or exit
+Ask user: type main menu or exit
   main menu brings you back to 1st method
   exit - exits the program
