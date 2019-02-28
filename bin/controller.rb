@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
 
-require_relative '../lib/flower_arrangement.rb'
+
+require './lib/flower_arrangement'
 
 FlowerArrangement::CLI.new.call
