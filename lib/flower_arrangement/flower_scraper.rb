@@ -8,12 +8,15 @@ class FlowerArrangement::FlowerScraper
   def self.scrape_main_website
     doc = Nokogiri::HTML(open("https://modernflorist.com/"))
     name = doc.css("a.hover-info span.product_title")
-      name.each do |title|
-        title.text
-    price =
-    url = 
+      name.collect{|title| title.text}
+      
+    price = doc.css("a.hover-info span.price").text.split("$")
+      price.collect {|amount| "${amount}"}.shift
+      
+    url = doc.css("a.more-link").attr("href").value
     binding.pry
-      end
+      
+      
   end
   
 end
