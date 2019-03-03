@@ -19,8 +19,8 @@ class FlowerArrangement::FlowerScraper
     while i < 16
       
     flower = self.new
-    flower.name = doc.css("a.hover-info span.product_title").text.split
-    flower.price = doc.css("a.hover-info span.price").text.split("$")
+    flower.name = doc.css("a.hover-info span.product_title")[0].text
+    flower.price = doc.css("a.hover-info span.price")[0].text
     flower.url = doc.css("a.more-link").attr("href").value
     i += 1 
   end 
