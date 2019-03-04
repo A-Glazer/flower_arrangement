@@ -22,18 +22,19 @@ class FlowerArrangement::CLI
     puts "3. $150 and up"
   end
 
-  def user_input_greeting
-    input = gets.strip
+  # def user_input_greeting
+  #   input = gets.strip
     
-    if input == "1"
-      puts "name"
+  #   if input == "1"
+  #     puts "name"
       
-    end 
+  #   end 
     
-  end
+  # end
   
-  def scraper_by_category
-    FlowerArrangement::FlowerScraper.scrape_main_website
+  def scraper_categories
+    scraped = FlowerArrangement::FlowerScraper.scrape_main_website
+    scraped.price
     binding.pry
   end
   

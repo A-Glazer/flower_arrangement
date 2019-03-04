@@ -1,0 +1,60 @@
+=> [[32m#<FlowerArrangement::FlowerScraper:0x0000000226b158[0m
+  @name[32m=[0m[31m[1;31m"[0m[31mDesigner's Choice[1;31m"[0m[31m[0m,
+  @price[32m=[0m[31m[1;31m"[0m[31m$50.00[1;31m"[0m[31m[0m,
+  @url[32m=[0m[31m[1;31m"[0m[31mhttps://modernflorist.com/designers_choice/product/settings[1;31m"[0m[31m[0m[32m>[0m,
+ [32m#<FlowerArrangement::FlowerScraper:0x0000000225db48[0m
+  @name[32m=[0m[31m[1;31m"[0m[31mQueen of the castle[1;31m"[0m[31m[0m,
+  @price[32m=[0m[31m[1;31m"[0m[31m$275.00[1;31m"[0m[31m[0m,
+  @url[32m=[0m[31m[1;31m"[0m[31mhttps://modernflorist.com/queen-of-the-castle.html[1;31m"[0m[31m[0m[32m>[0m,
+ [32m#<FlowerArrangement::FlowerScraper:0x0000000225c7c0[0m
+  @name[32m=[0m[31m[1;31m"[0m[31mfashionista blooms mfv-21[1;31m"[0m[31m[0m,
+  @price[32m=[0m[31m[1;31m"[0m[31m$99.99[1;31m"[0m[31m[0m,
+  @url[32m=[0m[31m[1;31m"[0m[31mhttps://modernflorist.com/fashionista-blooms-mfv-21.html[1;31m"[0m[31m[0m[32m>[0m,
+ [32m#<FlowerArrangement::FlowerScraper:0x0000000223eae0[0m
+  @name[32m=[0m[31m[1;31m"[0m[31mEternal rose in keepsake jewelry box[1;31m"[0m[31m[0m,
+  @price[32m=[0m[31m[1;31m"[0m[31m$150.00[1;31m"[0m[31m[0m,
+  @url[32m=[0m[31m[1;31m"[0m[31mhttps://modernflorist.com/eternal-rose.html[1;31m"[0m[31m[0m[32m>[0m,
+ [32m#<FlowerArrangement::FlowerScraper:0x0000000223cbf0[0m
+  @name[32m=[0m[31m[1;31m"[0m[31mModern Florist Orchid Simplicity MF-95[1;31m"[0m[31m[0m,
+  @price[32m=[0m[31m[1;31m"[0m[31m$64.99[1;31m"[0m[31m[0m,
+  @url[32m=[0m[31m[1;31m"[0m[31mhttps://modernflorist.com/the-orchid-mf-95.html[1;31m"[0m[31m[0m[32m>[0m,
+ [32m#<FlowerArrangement::FlowerScraper:0x00000002233938[0m
+  @name[32m=[0m[31m[1;31m"[0m[31mModern Florst Fields of Europe MF-02[1;31m"[0m[31m[0m,
+  @price[32m=[0m[31m[1;31m"[0m[31m$59.99[1;31m"[0m[31m[0m,
+  @url[32m=[0m[31m[1;31m"[0m[31mhttps://modernflorist.com/mfb-02-fields-of-europe.html[1;31m"[0m[31m[0m[32m>[0m,
+ [32m#<FlowerArrangement::FlowerScraper:0x00000002232c18[0m
+  @name[32m=[0m[31m[1;31m"[0m[31mModern Florist Upscale Beauty MF-85[1;31m"[0m[31m[0m,
+  @price[32m=[0m[31m[1;31m"[0m[31m$89.99[1;31m"[0m[31m[0m,
+  @url[32m=[0m[31m[1;31m"[0m[31mhttps://modernflorist.com/upscale-beauty-mf-85.html[1;31m"[0m[31m[0m[32m>[0m,
+ [32m#<FlowerArrangement::FlowerScraper:0x00000002231e80[0m
+  @name[32m=[0m[31m[1;31m"[0m[31mModern Florist Call Me Calla MF-57[1;31m"[0m[31m[0m,
+  @price[32m=[0m[31m[1;31m"[0m[31m$64.99[1;31m"[0m[31m[0m,
+  @url[32m=[0m[31m[1;31m"[0m[31mhttps://modernflorist.com/call-me-calla-mf-77.html[1;31m"[0m[31m[0m[32m>[0m,
+ [32m#<FlowerArrangement::FlowerScraper:0x00000002230cd8[0m
+  @name[32m=[0m[31m[1;31m"[0m[31mModern Florist Rhapsody Of Beauty MF-62[1;31m"[0m[31m[0m,
+  @price[32m=[0m[31m[1;31m"[0m[31m$89.99[1;31m"[0m[31m[0m,
+  @url[32m=[0m[31m[1;31m"[0m[31mhttps://modernflorist.com/rhapsody-of-beauty-mf-62.html[1;31m"[0m[31m[0m[32m>[0m,
+ [32m#<FlowerArrangement::FlowerScraper:0x00000002223060[0m
+  @name[32m=[0m[31m[1;31m"[0m[31mBeautiful and Bold[1;31m"[0m[31m[0m,
+  @price[32m=[0m[31m[1;31m"[0m[31m$75.00[1;31m"[0m[31m[0m,
+  @url[32m=[0m[31m[1;31m"[0m[31mhttps://modernflorist.com/beautiful-and-bold.html[1;31m"[0m[31m[0m[32m>[0m,
+ [32m#<FlowerArrangement::FlowerScraper:0x00000002220928[0m
+  @name[32m=[0m[31m[1;31m"[0m[31mGarden Rhapsody[1;31m"[0m[31m[0m,
+  @price[32m=[0m[31m[1;31m"[0m[31m$85.00[1;31m"[0m[31m[0m,
+  @url[32m=[0m[31m[1;31m"[0m[31mhttps://modernflorist.com/garden-rhapsody.html[1;31m"[0m[31m[0m[32m>[0m,
+ [32m#<FlowerArrangement::FlowerScraper:0x000000021dc480[0m
+  @name[32m=[0m[31m[1;31m"[0m[31mA modern mix MF-90[1;31m"[0m[31m[0m,
+  @price[32m=[0m[31m[1;31m"[0m[31m$45.00[1;31m"[0m[31m[0m,
+  @url[32m=[0m[31m[1;31m"[0m[31mhttps://modernflorist.com/a-modern-mix-mf-90.html[1;31m"[0m[31m[0m[32m>[0m,
+ [32m#<FlowerArrangement::FlowerScraper:0x000000021b51f0[0m
+  @name[32m=[0m[31m[1;31m"[0m[31mGourmet Fruit Basket MFB-88[1;31m"[0m[31m[0m,
+  @price[32m=[0m[31m[1;31m"[0m[31m$80.00[1;31m"[0m[31m[0m,
+  @url[32m=[0m[31m[1;31m"[0m[31mhttps://modernflorist.com/gourmet-fruit-basket-mfb-88.html[1;31m"[0m[31m[0m[32m>[0m,
+ [32m#<FlowerArrangement::FlowerScraper:0x000000021984d8[0m
+  @name[32m=[0m[31m[1;31m"[0m[31malways on my mind mfv-08[1;31m"[0m[31m[0m,
+  @price[32m=[0m[31m[1;31m"[0m[31m$124.99[1;31m"[0m[31m[0m,
+  @url[32m=[0m[31m[1;31m"[0m[31mhttps://modernflorist.com/always-in-my-mind-mfv-08.html[1;31m"[0m[31m[0m[32m>[0m,
+ [32m#<FlowerArrangement::FlowerScraper:0x0000000218af18[0m
+  @name[32m=[0m[31m[1;31m"[0m[31mthougths mfv-13[1;31m"[0m[31m[0m,
+  @price[32m=[0m[31m[1;31m"[0m[31m$55.00[1;31m"[0m[31m[0m,
+  @url[32m=[0m[31m[1;31m"[0m[31mhttps://modernflorist.com/thougths-mfv-13.html[1;31m"[0m[31m[0m[32m>[0m]
