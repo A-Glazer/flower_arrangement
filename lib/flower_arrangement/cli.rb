@@ -1,6 +1,6 @@
 require_relative 'version.rb' #remove before saving final project
 # FlowerArrangement::FlowerScraper.scrape_main_website #test with bin/controller - running like user
-class FlowerArrangement::CLI
+class CLI
   attr_accessor :name, :price, :url
 
   def initialize
@@ -33,7 +33,7 @@ class FlowerArrangement::CLI
   # end
   
   def scraper_categories
-    scraped = FlowerArrangement::FlowerScraper.scrape_main_website
+    scraped = Scraper.scrape_main_website
     # scraped.price
     binding.pry
   end
