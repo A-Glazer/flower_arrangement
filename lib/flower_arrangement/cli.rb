@@ -7,23 +7,25 @@ class CLI
     @@med = []
     @@high = [] 
 
-def initialize(name,price,url)
-  @name = name
-  @price = price
-  @url = url    
-  
-  @@all << self
-end
+  def initialize(name,price,url)
+    @name = name
+    @price = price
+    @url = url    
+    
+    @@all << self
+  end
 
-def self.all
-    @@all
-end
+  def self.all
+      @@all
+  end
 
   def call
+    scraper_categories
     greeting
     user_input_greeting
     see_more
     goodbye
+    binding.pry
   end
   
   def greeting
@@ -35,7 +37,7 @@ end
 
   def scraper_categories
     scraped = Scraper.scrape_website
-    Flower.all 
+    self.all 
     #find method?
     # if price == $0..$79
       # @@low << flower_object

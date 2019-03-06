@@ -3,4 +3,4 @@
 
 require './lib/flower_arrangement'
 
-FlowerArrangement::CLI.new.call
+CLI.new.call

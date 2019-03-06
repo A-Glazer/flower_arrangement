@@ -13,10 +13,10 @@ class Scraper
       name = flower.css("span.product_title").text
       price = flower.css("span.price").text
       url = flower.css("a.more-link").attr("href").value
-
+       
       CLI.new(name,price,url)
-  
     end
+    
   end 
  
   
