@@ -34,7 +34,7 @@ class FlowerArrangement::CLI
   
   def scraper_categories
     scraped = FlowerArrangement::FlowerScraper.scrape_main_website
-    scraped.price
+    # scraped.price
     binding.pry
   end
   
