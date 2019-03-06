@@ -1,23 +1,10 @@
 require_relative 'version.rb' #remove before saving final project
 
 class CLI
-  attr_accessor :name, :price, :url
-    @@all = []
     @@low = []
     @@med = []
     @@high = [] 
 
-  def initialize(name,price,url)
-    @name = name
-    @price = price
-    @url = url    
-    
-    @@all << self
-  end
-
-  def self.all
-      @@all
-  end
 
   def call
     scraper_categories
@@ -25,7 +12,7 @@ class CLI
     user_input_greeting
     see_more
     goodbye
-    binding.pry
+  
   end
   
   def greeting
@@ -35,9 +22,22 @@ class CLI
     puts "3. $150 and up"
   end
 
+  # def user_input_greeting
+  #   input = gets.strip
+    
+  #   if input == "1"
+  #     puts @@low
+  #   elsif input == "2"
+  #     puts @@med
+  #   elsif input == "3"
+  #     puts @@high
+  #   end 
+    
+  # end
+  
   def scraper_categories
     scraped = Scraper.scrape_website
-    self.all 
+    Flower.all 
     #find method?
     # if price == $0..$79
       # @@low << flower_object

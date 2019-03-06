@@ -1,4 +1,5 @@
 require_relative 'version.rb'
+require 'nokogiri'
 
 class Scraper
   
@@ -14,11 +15,12 @@ class Scraper
       price = flower.css("span.price").text
       url = flower.css("a.more-link").attr("href").value
        
-      CLI.new(name,price,url)
+      FlowerArrangement::Flower.new(name,price,url)
+      binding.pry
     end
     
   end 
  
   
 end
-
+Scraper.scrape_website

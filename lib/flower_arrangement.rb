@@ -6,3 +6,4 @@ require 'open-uri'
 
 require_relative './flower_arrangement/scraper'
 require_relative './flower_arrangement/cli'
+require_relative './flower_arrangement/flower'
