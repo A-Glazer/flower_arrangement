@@ -10,12 +10,12 @@ class Scraper
     
     flowers.each do |flower|
          
-      name = flower.css("a.hover-info span.product_title").text
-      price = flower.css("a.hover-info span.price").text
+      name = flower.css("span.product_title").text
+      price = flower.css("span.price").text
       url = flower.css("a.more-link").attr("href").value
 
       Flower.new(name,price,url)
-      binding.pry
+  
     end
   end 
  
