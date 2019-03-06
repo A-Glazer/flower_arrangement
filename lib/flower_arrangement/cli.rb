@@ -1,10 +1,23 @@
 require_relative 'version.rb' #remove before saving final project
 
 class CLI
-  @@low = []
-  @@med = []
-  @@high = [] 
+  attr_accessor :name, :price, :url
+    @@all = []
+    @@low = []
+    @@med = []
+    @@high = [] 
 
+def initialize(name,price,url)
+  @name = name
+  @price = price
+  @url = url    
+  
+  @@all << self
+end
+
+def self.all
+    @@all
+end
 
   def call
     greeting
@@ -58,7 +71,7 @@ class CLI
   
   #  def see_more
   #   input = gets.strip
-  #     Flower.all.find(input)
+  #     self.all.find(input)
   #       puts input.url
   #     end
   # end

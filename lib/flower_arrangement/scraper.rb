@@ -14,7 +14,7 @@ class Scraper
       price = flower.css("span.price").text
       url = flower.css("a.more-link").attr("href").value
 
-      Flower.new(name,price,url)
+      CLI.new(name,price,url)
   
     end
   end 
