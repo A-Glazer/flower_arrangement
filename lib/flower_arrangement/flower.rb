@@ -1,6 +1,6 @@
 require_relative 'version.rb'
 
-class FlowerArragement::Flower
+class Flower
     attr_accessor :name, :price, :url
     @@all = []
 

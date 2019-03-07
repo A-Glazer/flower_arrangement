@@ -5,7 +5,6 @@ class CLI
     @@low = []
     @@med = []
     @@high = [] 
-# testing 123
 
   def call
     scraper_categories
@@ -38,7 +37,18 @@ class CLI
   
   def scraper_categories
     scraped = Scraper.scrape_website
-    Flower.all 
+    flowers = Flower.all 
+    flowers.find do |flower| 
+      number = flower.price.gsub("$","")
+      binding.pry
+        if number > 80.00 
+          @@low >> number
+        else
+          "false"
+       end
+    end
+
+
     #find method?
     # if price == $0..$79
       # @@low << flower_object
@@ -48,7 +58,6 @@ class CLI
       # @@high << flower_object
     # end 
 
-    # binding.pry
   end
 
 
