@@ -1,10 +1,11 @@
 require_relative 'version.rb' #remove before saving final project
 
+
 class CLI
     @@low = []
     @@med = []
     @@high = [] 
-
+# testing 123
 
   def call
     scraper_categories
