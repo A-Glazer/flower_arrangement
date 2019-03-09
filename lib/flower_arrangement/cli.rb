@@ -10,7 +10,7 @@ class CLI
     scraper_categories
     greeting
     user_input_greeting
-    see_more
+    # see_more
     goodbye
   
   end
@@ -22,18 +22,29 @@ class CLI
     puts "3. $150 and up"
   end
 
-  # def user_input_greeting
-  #   input = gets.strip
+  def user_input_greeting
+    input = gets.strip
+
     
-  #   if input == "1"
-  #     puts @@low
-  #   elsif input == "2"
-  #     puts @@med
-  #   elsif input == "3"
-  #     puts @@high
-  #   end 
-    
-  # end
+    if input == "1" || "$45 - $79"
+      @@low.each do |flower|
+        puts "Name: #{flower.name}, Price: #{flower.price}, Link: #{flower.url}" 
+      end
+    elsif input == "2" || "$80 - $149"
+      @@med.each do |flower|
+        puts "Name: #{flower.name}, Price: #{flower.price} Link: #{flower.url}"
+      end
+    elsif input == "3" || "$150 and up"
+      @@high.each do |flower|
+        puts "Name: #{flower.name}, Price: #{flower.price} Link: #{flower.url}"
+      end
+    elsif input == "exit" || input == "main menu"
+        goodbye
+    else
+      puts "Invalid request, please choose a price range."
+    end 
+    # binding.pry
+  end
   
   def scraper_categories
     scraped = Scraper.scrape_website
@@ -47,42 +58,11 @@ class CLI
       elsif number > 80.00 && number < 150.00
         @@med << flower
       end
-      binding.pry
     end
-
-
-    #find method?
-    # if price == $0..$79
-      # @@low << flower_object
-    # elsif == $80..$149
-      # @@med << flower_object
-    # else
-      # @@high << flower_object
-    # end 
-
   end
 
 
-  # def user_input_greeting
-  #   input = gets.strip
-    
-  #   if input == "1" || "$45 - $79"
-  #     puts @@low
-  #     puts "Do you want to see more information about a particular flower? Please type in the flower name."
-  #   elsif input == "2" || "$80 - $149"
-  #     puts @@med
-  #     puts "Do you want to see more information about a particular flower? Please type in the flower name."
-  #   elsif input == "3" || "$150 and up"
-  #     puts @@high
-  #     puts "Do you want to see more information about a particular flower? Please type in the flower name."
-  #   elsif input == "exit"
-  #     puts "Thank you for shopping. Hope to see you again soon!"
-  #   else
-  #     puts "invalid request, please choose a price range"
-  #   end 
-    
-  # end
-  
+ 
   #  def see_more
   #   input = gets.strip
   #     self.all.find(input)
@@ -90,17 +70,16 @@ class CLI
   #     end
   # end
 
-  # def goodbye
-  #   puts "Thank you for shopping. Please type in "main menu" or "exit"."
-  #   input = gets.strip
-  #     if input == "main menu"
-  #       call
-  #     elsif input == "exit"
-  #       puts "Goodbye"
-  #     else 
-  #       puts "Invalid entry. Please type either "main menu" or "exit"."
-
-  # end
+  def goodbye
+    puts "Thank you for shopping. Please type in "main menu" or "exit"."
+      if input == "main menu"
+        call
+      elsif input == "exit"
+        puts "Goodbye"
+      else 
+        puts "Invalid entry. Please type either "main menu" or "exit"."
+      end
+  end
 
   
 end
