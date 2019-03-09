@@ -43,7 +43,7 @@ class CLI
     else
       puts "Invalid request, please choose a price range."
     end 
-    # binding.pry
+    binding.pry
   end
   
   def scraper_categories
@@ -51,12 +51,12 @@ class CLI
     flowers = Flower.all 
     flowers.each do |flower| 
       number = flower.price.gsub("$","").to_i
-      if number > 150.00
-        @@high << flower
+      if number >= 150.00
+        @@high << flower unless @@high.include?(flower)
       elsif number < 80.00 && number > 0.00
-        @@low << flower
+        @@low << flower unless @@low.include?(flower)
       elsif number > 80.00 && number < 150.00
-        @@med << flower
+        @@med << flower unless @@med.include?(flower)
       end
     end
   end
@@ -71,13 +71,15 @@ class CLI
   # end
 
   def goodbye
-    puts "Thank you for shopping. Please type in "main menu" or "exit"."
+    puts "Thank you for shopping. Please type in main menu or exit."
+  
+    input = gets.strip
       if input == "main menu"
         call
       elsif input == "exit"
         puts "Goodbye"
       else 
-        puts "Invalid entry. Please type either "main menu" or "exit"."
+        puts "Invalid entry. Please type either main menu or exit."
       end
   end
 
