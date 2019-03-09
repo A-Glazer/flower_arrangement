@@ -38,14 +38,16 @@ class CLI
   def scraper_categories
     scraped = Scraper.scrape_website
     flowers = Flower.all 
-    flowers.find do |flower| 
-      number = flower.price.gsub("$","")
+    flowers.each do |flower| 
+      number = flower.price.gsub("$","").to_i
+      if number > 150.00
+        @@high << flower
+      elsif number < 80.00 && number > 0.00
+        @@low << flower
+      elsif number > 80.00 && number < 150.00
+        @@med << flower
+      end
       binding.pry
-        if number > 80.00 
-          @@low >> number
-        else
-          "false"
-       end
     end
 
 
