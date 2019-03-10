@@ -16,26 +16,28 @@ class CLI
   end
   
   def greeting
-    puts "Welcome to Modern Florist, please enter a price range from the choices below:"
+    puts "Welcome to Modern Florist, please enter a number refering to a price range from the choices below:"
     puts "1. $45 - $79"
     puts "2. $80 - $149"
     puts "3. $150 and up"
   end
 
   def user_input_greeting
-    input = gets.strip
-
-    
-    if input == "1" || "$45 - $79"
-      @@low.each do |flower|
+    input = gets.strip.to_i    
+    if input == 1 
+      low = @@low.uniq
+      low.each do |flower|
         puts "Name: #{flower.name}, Price: #{flower.price}, Link: #{flower.url}" 
       end
-    elsif input == "2" || "$80 - $149"
-      @@med.each do |flower|
+      binding.pry
+    elsif input == 2 
+      med = @@med.uniq
+      med.each do |flower|
         puts "Name: #{flower.name}, Price: #{flower.price} Link: #{flower.url}"
       end
-    elsif input == "3" || "$150 and up"
-      @@high.each do |flower|
+    elsif input == 3 
+      high = @@high.uniq
+      high.each do |flower|
         puts "Name: #{flower.name}, Price: #{flower.price} Link: #{flower.url}"
       end
     elsif input == "exit" || input == "main menu"
@@ -43,7 +45,6 @@ class CLI
     else
       puts "Invalid request, please choose a price range."
     end 
-    binding.pry
   end
   
   def scraper_categories
@@ -52,7 +53,8 @@ class CLI
     flowers.each do |flower| 
       number = flower.price.gsub("$","").to_i
       if number >= 150.00
-        @@high << flower unless @@high.include?(flower)
+        @@high |= [flower]
+     
       elsif number < 80.00 && number > 0.00
         @@low << flower unless @@low.include?(flower)
       elsif number > 80.00 && number < 150.00
