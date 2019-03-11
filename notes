@@ -34,5 +34,5 @@ Ask user: type main menu or exit
 #CLI will call on the scraper and will pass in the name, price and url argument
 
 
-#3/9/19
-# figure out why @@low, @@med, @@high are duplicated
+#3/11/19
+#find out if need to go to second page

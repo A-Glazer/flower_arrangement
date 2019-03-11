@@ -6,13 +6,20 @@ class CLI
     @@med = []
     @@high = [] 
 
-  def call
+  def call_beg
     scraper_categories
     greeting
     user_input_greeting
     # see_more
     goodbye
+  end
+
   
+  def call
+    greeting
+    user_input_greeting
+    # see_more
+    goodbye
   end
   
   def greeting
@@ -25,20 +32,20 @@ class CLI
   def user_input_greeting
     input = gets.strip.to_i    
     if input == 1 
-      low = @@low.uniq
-      low.each do |flower|
-        puts "Name: #{flower.name}, Price: #{flower.price}, Link: #{flower.url}" 
+      low = @@low
+      low.collect do |flower|
+        puts "Name: #{flower.name}  *  Price: #{flower.price}  *  Link: #{flower.url}" 
       end
-      binding.pry
+      # binding.pry
     elsif input == 2 
-      med = @@med.uniq
-      med.each do |flower|
-        puts "Name: #{flower.name}, Price: #{flower.price} Link: #{flower.url}"
+      med = @@med
+      med.collect do |flower|
+        puts "Name: #{flower.name}  *  Price: #{flower.price}  *  Link: #{flower.url}"
       end
     elsif input == 3 
-      high = @@high.uniq
-      high.each do |flower|
-        puts "Name: #{flower.name}, Price: #{flower.price} Link: #{flower.url}"
+      high = @@high
+      high.uniq.collect do |flower|
+        puts "Name: #{flower.name}  *  Price: #{flower.price}  *  Link: #{flower.url}"
       end
     elsif input == "exit" || input == "main menu"
         goodbye
@@ -49,16 +56,16 @@ class CLI
   
   def scraper_categories
     scraped = Scraper.scrape_website
-    flowers = Flower.all 
-    flowers.each do |flower| 
+    # flowers = Flower.all 
+    scraped.each do |flower| 
       number = flower.price.gsub("$","").to_i
+      # binding.pry
       if number >= 150.00
-        @@high |= [flower]
-     
+        @@high << flower
       elsif number < 80.00 && number > 0.00
-        @@low << flower unless @@low.include?(flower)
+        @@low << flower 
       elsif number > 80.00 && number < 150.00
-        @@med << flower unless @@med.include?(flower)
+        @@med << flower
       end
     end
   end

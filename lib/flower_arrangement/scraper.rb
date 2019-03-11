@@ -8,19 +8,17 @@ class Scraper
     website = Nokogiri::HTML(open("https://modernflorist.com/"))
     section = website.css("div.products-grid-wrapper")
     
-    flowers = section.css("li")
-    
-    flowers.each do |flower|
+    @@flowers = section.css("li")
+    @@flowers.collect do |flower|
          
       name = flower.css("span.product_title").text
       price = flower.css("span.price").text
       url = flower.css("a.more-link").attr("href").value
-       
-      Flower.new(name,price,url)
+               
+      object = Flower.create(name,price,url)
     end
     
   end 
  
   
 end
-# Scraper.scrape_website

@@ -21,12 +21,12 @@ class Flower
     @@all.clear 
   end
 
-  def save 
-    @@all << self
+  def self.create(name, price, url)
+    flower = self.new(name, price, url) if find_by_name(name).nil?
   end
 
-  
-
-
+  def self.find_by_name(name)
+    @@all.find { |flower| flower.name == name }
+  end
 
 end
