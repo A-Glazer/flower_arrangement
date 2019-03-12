@@ -10,7 +10,7 @@ class CLI
     scraper_categories
     greeting
     user_input_greeting
-    # see_more
+    see_more
     goodbye
   end
 
@@ -18,7 +18,7 @@ class CLI
   def call
     greeting
     user_input_greeting
-    # see_more
+    see_more
     goodbye
   end
   
@@ -34,18 +34,18 @@ class CLI
     if input == 1 
       low = @@low
       low.collect do |flower|
-        puts "Name: #{flower.name}  *  Price: #{flower.price}  *  Link: #{flower.url}" 
+        puts "Name: #{flower.name}" 
       end
       # binding.pry
     elsif input == 2 
       med = @@med
       med.collect do |flower|
-        puts "Name: #{flower.name}  *  Price: #{flower.price}  *  Link: #{flower.url}"
+        puts "Name: #{flower.name}"
       end
     elsif input == 3 
       high = @@high
       high.uniq.collect do |flower|
-        puts "Name: #{flower.name}  *  Price: #{flower.price}  *  Link: #{flower.url}"
+        puts "Name: #{flower.name}"
       end
     elsif input == "exit" || input == "main menu"
         goodbye
@@ -72,12 +72,16 @@ class CLI
 
 
  
-  #  def see_more
-  #   input = gets.strip
-  #     self.all.find(input)
-  #       puts input.url
-  #     end
-  # end
+   def see_more
+    puts "Would you like to see more information about a specific flower? Please type in the flower name as it appears above."
+    input = gets.strip
+    flower = Flower.find_by_name(input)
+    binding.pry
+ 
+      puts "Name: #{flower.name}  *  Price: #{flower.price}  *  Link: #{flower.url}"
+  
+      
+  end
 
   def goodbye
     puts "Thank you for shopping. Please type in main menu or exit."

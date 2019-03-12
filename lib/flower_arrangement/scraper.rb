@@ -10,8 +10,16 @@ class Scraper
     
     @@flowers = section.css("li")
     @@flowers.collect do |flower|
-         
-      name = flower.css("span.product_title").text
+         #capitalize name in this method
+      name = flower.css("span.product_title").text 
+      test = "testing This is lowercase"
+      test.split(" ").collect do |word|
+        letters = word.split("")
+        letters.first.upcase!
+        letters.join
+
+  
+      end.join(" ")
       price = flower.css("span.price").text
       url = flower.css("a.more-link").attr("href").value
                
