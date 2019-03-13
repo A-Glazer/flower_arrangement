@@ -1,5 +1,4 @@
-require_relative 'version.rb' #remove before saving final project
-
+# require_relative 'version.rb' #remove before saving final project
 
 class CLI
     @@low = []
@@ -14,7 +13,6 @@ class CLI
     goodbye
   end
 
-  
   def call
     greeting
     user_input_greeting
@@ -36,30 +34,34 @@ class CLI
       low.collect do |flower|
         puts "Name: #{flower.name}" 
       end
-      # binding.pry
+
     elsif input == 2 
       med = @@med
       med.collect do |flower|
         puts "Name: #{flower.name}"
       end
+
     elsif input == 3 
       high = @@high
       high.uniq.collect do |flower|
         puts "Name: #{flower.name}"
       end
+
     elsif input == "exit" || input == "main menu"
         goodbye
+
     else
       puts "Invalid request, please choose a price range."
+      user_input_greeting
     end 
   end
   
   def scraper_categories
     scraped = Scraper.scrape_website
-    # flowers = Flower.all 
+   
     scraped.each do |flower| 
       number = flower.price.gsub("$","").to_i
-      # binding.pry
+
       if number >= 150.00
         @@high << flower
       elsif number < 80.00 && number > 0.00
@@ -71,12 +73,13 @@ class CLI
   end
 
 
- 
   def see_more
     puts "Would you like to see more information about a specific flower? Please type in the flower name as it appears above."
     input = gets.strip
     if flower = Flower.find_by_name(input)
        puts "Name: #{flower.name}  *  Price: #{flower.price}  *  Link: #{flower.url}"
+    elsif input == "exit" || input == "main menu"
+      goodbye
     else
       puts "Invalid entry. Please type the flower name."
       see_more   
@@ -95,7 +98,6 @@ class CLI
         puts "Invalid entry. Please type either main menu or exit."
       end
   end
-
   
 end
 

@@ -10,8 +10,7 @@ class Scraper
     
     @@flowers = section.css("li")
     @@flowers.collect do |flower|
-         #capitalize name in this method
-         capname = []
+      capname = []
       name = flower.css("span.product_title").text 
       words = name.split(" ")
       words.collect do |word|
@@ -21,7 +20,6 @@ class Scraper
         capname << capital
       end
       name = capname.join(" ")
-      # binding.pry
 
 
       price = flower.css("span.price").text

@@ -9,7 +9,6 @@ class Flower
     @name = name
     @price = price
     @url = url    
-    
     @@all << self
   end
 
@@ -17,9 +16,9 @@ class Flower
       @@all
   end
 
-  def self.clear
-    @@all.clear 
-  end
+  # def self.clear
+  #   @@all.clear 
+  # end
 
   def self.create(name, price, url)
     flower = self.new(name, price, url) if find_by_name(name).nil?
