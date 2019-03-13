@@ -1,10 +1,8 @@
-HELLO WORLD!!
-
 # FlowerArrangement
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/flower_arrangement`. To experiment with that code, run `bin/console` for an interactive prompt.
 
-TODO: Delete this and the text above, and describe your gem
+FlowerArrangement will help you choose a flower in your price range.
 
 ## Installation
 
@@ -24,7 +22,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+FlowerArrangement is designed to help users find flowers in their price range from Modernflorist.com. 
 
 ## Development
 
