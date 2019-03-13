@@ -75,14 +75,12 @@ class CLI
   def see_more
     puts "Would you like to see more information about a specific flower? Please type in the flower name as it appears above."
     input = gets.strip
-    flower = Flower.find_by_name(input)
-      puts "Name: #{flower.name}  *  Price: #{flower.price}  *  Link: #{flower.url}"
-   
-      
-      
-    # binding.pry
-   
-      
+    if flower = Flower.find_by_name(input)
+       puts "Name: #{flower.name}  *  Price: #{flower.price}  *  Link: #{flower.url}"
+    else
+      puts "Invalid entry. Please type the flower name."
+      see_more   
+    end
   end
 
   def goodbye
