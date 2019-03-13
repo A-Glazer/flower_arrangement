@@ -21,7 +21,7 @@ class CLI
   end
   
   def greeting
-    puts "Welcome to Modern Florist, please enter a number refering to a price range from the choices below:"
+    puts "Welcome to Modern Florist, please enter a number referring to a price range from the choices below:"
     puts "1. $45 - $79"
     puts "2. $80 - $149"
     puts "3. $150 and up"
