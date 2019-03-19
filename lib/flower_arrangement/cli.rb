@@ -30,20 +30,17 @@ class CLI
   def user_input_greeting
     input = gets.strip.to_i    
     if input == 1 
-      low = @@low
-      low.collect do |flower|
+      @@low.collect do |flower|
         puts "Name: #{flower.name}" 
       end
 
     elsif input == 2 
-      med = @@med
-      med.collect do |flower|
+      @@med.collect do |flower|
         puts "Name: #{flower.name}"
       end
 
     elsif input == 3 
-      high = @@high
-      high.uniq.collect do |flower|
+     @@high.uniq.collect do |flower|
         puts "Name: #{flower.name}"
       end
 
