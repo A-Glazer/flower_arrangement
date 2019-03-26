@@ -30,5 +30,20 @@ class Scraper
     
   end 
  
+  def scraper_categories
+    scraped = self.scrape_website
+   
+    scraped.each do |flower| 
+      number = flower.price.gsub("$","").to_i
+
+      if number >= 150.00
+        CLI.high << flower
+      elsif number < 80.00 && number > 0.00
+        CLI.low << flower 
+      elsif number > 80.00 && number < 150.00
+        CLI.med << flower
+      end
+    end
+  end
   
 end
